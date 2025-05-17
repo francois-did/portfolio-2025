@@ -306,6 +306,67 @@ header {
   object-fit: cover;
 }
 
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.projets-carousel {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s ease-in-out;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.projets-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carte-projet {
+  min-width: 31%;
+  flex-shrink: 0;
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  padding: 8px 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn.left {
+  left: -15px;
+}
+
+.carousel-btn.right {
+  right: -15px;
+}
+
+@media (max-width: 768px) {
+  .carte-projet {
+    min-width: 90%;
+  }
+
+  .carousel-btn.left {
+    left: 5px;
+  }
+
+  .carousel-btn.right {
+    right: 5px;
+  }
+}
 
 
      
