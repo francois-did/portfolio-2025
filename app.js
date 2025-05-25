@@ -47,69 +47,68 @@ const projets = [
     image: "images/portrait.jpg",
     description: "site vitrine en html css (copie)",
     technologies: "html/css"
-  },
-  {
-    nom: "Kasa (copy)",
-    image: "images/portrait.jpg",
-    description: "version doublée de Kasa",
-    technologies: "React"
   }
 ];
 
-const projetsContainer = document.querySelector(".projets-carousel");
-
+const projetsContent = document.querySelector(".projets");
 
 projets.forEach((projet) => {
-  const card = `
-    <div class="carte-projet">
-      <img src="${projet.image}" alt="${projet.nom}">
-      <div class="carte-texte"> 
-        <h3 class="projet-nom">${projet.nom}</h3>
+  const projetHTML = `
+    <div class="projet-item"> 
+      <div class="projet-img">
+        <img src="${projet.image}" alt="${projet.nom}" />
+      </div>
+      <div class="projet-content"> 
+        <p class="projet-nom">${projet.nom}</p>
         <p class="projet-description">${projet.description}</p>
-        <p class="projet-techno">${projet.technologies}</p>
       </div>
     </div>
   `;
-  projetsContainer.innerHTML += card;
-});
-
-// Carousel JS
-let scrollAmount = 0;
-const scrollStep = projetsContainer.querySelector(".carte-projet").offsetWidth + 24;
-
-
-document.querySelector(".carousel-btn.left").addEventListener("click", () => {
-  if (projetsContainer.scrollLeft <= 0) {
-    projetsContainer.scrollTo({
-      left: projetsContainer.scrollWidth,
-      behavior: "smooth"
-    });
-  } else {
-    projetsContainer.scrollBy({
-      left: -scrollStep,
-      behavior: "smooth"
-    });
-  }
+  projetsContent.innerHTML += projetHTML;
 });
 
 
-document.querySelector(".carousel-btn.right").addEventListener("click", () => {
-  const maxScroll = projetsContainer.scrollWidth - projetsContainer.clientWidth;
+// COMPETENCES
 
-  if (projetsContainer.scrollLeft >= maxScroll) {
-    projetsContainer.scrollTo({
-      left: 0,
-      behavior: "smooth"
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.competence-card');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    cards.forEach(card => {
+        observer.observe(card);
+        
+        card.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            Object.assign(ripple.style, {
+                width: size + 'px',
+                height: size + 'px',
+                left: x + 'px',
+                top: y + 'px',
+                position: 'absolute',
+                borderRadius: '50%',
+                background: 'rgba(0, 0, 0, 0.1)',
+                transform: 'scale(0)',
+                animation: 'ripple 0.6s linear',
+                pointerEvents: 'none'
+            });
+            
+            this.style.position = 'relative';
+            this.style.overflow = 'hidden';
+            this.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 600);
+        });
     });
-  } else {
-    projetsContainer.scrollBy({
-      left: scrollStep,
-      behavior: "smooth"
-    });
-  }
 });
-
-
-
-
-
