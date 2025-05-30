@@ -7,32 +7,26 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
 
     <header>
-      <div class="container">
-
-      
-        <nav class="navbar">
+      <div class="container" id="navBar">
+        <nav class="navbar" >
           <div class="logo">
             <img src="images/portrait.jpg" alt="portrait">
             <p class="nav-branding">François Didouche</p>
           </div>
             
-
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Accueil</a>
+                    <a href="#navBar" class="nav-link">Accueil</a>
                 </li>
-
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Projets</a>
+                    <a href="#projets" class="nav-link">Projets</a>
                 </li>
-
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
               
@@ -41,7 +35,6 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-
         </nav>
       </div>  
     </header>
@@ -50,26 +43,22 @@
       <section class="about">
         <p id="dynamic-presentation"></p>
         <div class="text-container">
-
           <div class="about-text">
             <p class="about-title">Je suis François Didouche</p>
             <p class="about-details">Développeur frontend principalement basé en Normandie</p>
-            <p class="about-details" >Axé sur les détails, je m'efforce de créer des logiciels esthétiques et faciles à utiliser tout en développant mes compétences.</p>
+            <p class="about-details">Axé sur les détails, je m'efforce de créer des logiciels esthétiques et faciles à utiliser tout en développant mes compétences.</p>
           </div>
 
           <div class="about-photo">
             <img src="images/portrait.jpg" alt="portrait">
           </div>
-
         </div>
         
-
         <div class="about-info">
           <div class="info-b">
             <button class="about-buttons"><i class="fa-solid fa-user"></i>A propos de moi</button>
           </div>
           
-
           <div class="social-icons">
             <a href="#"><i class="fa-brands fa-github"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin"></i></a>
@@ -77,67 +66,109 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-solid fa-at"></i></a>
           </div>
-            
         </div>
-        
       </section>
 
-      
-<section class="Projets-container">
-  
-  <div class="projets-title">
-    <h2>Quelques projets</h2>
-    <a href="#"> <p> Voir tout</p> </a>
-  </div>  
+      <section class="projets-container" id="projets">
+        <div class="projets-title">
+          <h2>Quelques projets</h2>
+          <a href="projets.html"><p>Voir tout</p></a>
+        </div>  
+        <div class="projets"></div>
+      </section>
 
-  <div class="projets">
+      <section class="competences-section">
+          <div class="section-header">
+              <p class="section-subtitle">COMPÉTENCES</p>
+          </div>
+          
+          <div class="competences-container">
+              <div class="competence-card">
+                  <div class="competence-icon react">⚛️</div>
+                  <h3 class="competence-title">React</h3>
+                  <p class="competence-description">Mon framework principal est React.</p>
+              </div>
 
-    
-  </div>
+              <div class="competence-card">
+                  <div class="competence-icon node">🟢</div>
+                  <h3 class="competence-title">Node.js</h3>
+                  <p class="competence-description">Création d'API avec node et express</p>
+              </div>
 
-</section>
+              <div class="competence-card">
+                  <div class="competence-icon django">dj</div>
+                  <h3 class="competence-title">Django</h3>
+                  <p class="competence-description">intégration django</p>
+              </div>
 
+              <div class="competence-card">
+                  <div class="competence-icon seo">🔍</div>
+                  <h3 class="competence-title">SEO</h3>
+                  <p class="competence-description">J'optimise vos sites afin d'en améliorer la visibilité</p>
+              </div>
+          </div>
+      </section>
 
-<section class="competences-section">
-    <div class="section-header">
-        <p class="section-subtitle">COMPÉTENCES</p>
-        <h2 class="section-title">J'adore travailler avec...</h2>
-    </div>
-    
-    <div class="competences-container">
-        <div class="competence-card">
-            <div class="competence-icon react">⚛️</div>
-            <h3 class="competence-title">React</h3>
-            <p class="competence-description">Mon framework principal est React.</p>
+      <section class="contact-section" id="contact">
+        <div class="contact-header">
+          <p class="section-subtitle">CONTACT</p>
         </div>
+        
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>francoisdidouche@gmail.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h3>Téléphone</h3>
+                <p>+33 7 63 11 66 22</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h3>Localisation</h3>
+                <p>Normandie, France</p>
+              </div>
+            </div>
+          </div>
 
-        <div class="competence-card">
-            <div class="competence-icon node">🟢</div>
-            <h3 class="competence-title">Node.js</h3>
-            <p class="competence-description">Création d'API avec node et express</p>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              Envoyer le message
+            </button>
+          </form>
         </div>
-
-        <div class="competence-card">
-            <div class="competence-icon django">dj</div>
-            <h3 class="competence-title">Django</h3>
-            <p class="competence-description">Je suis expert dans l'intégration de <span class="highlight">Django</span> dans vos applications pour créer une expérience utilisateur parfaite.</p>
-        </div>
-
-        <div class="competence-card">
-            <div class="competence-icon seo">🔍</div>
-            <h3 class="competence-title">SEO</h3>
-            <p class="competence-description">J'optimise vos sites pour les <span class="highlight">moteurs de recherche</span> afin d'améliorer votre <span class="highlight">visibilité</span> et votre trafic organique.</p>
-        </div>
-    </div>
-</section>
-
-
+      </section>
     </main>
-    
-
-      
-      
-      
-    
 </body>
 </html>

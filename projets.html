@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - François Didouche</title>
+    <link rel="stylesheet" href="projets.css">
+    <script src="projets.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container" id="navBar">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/portrait.jpg" alt="portrait">
+                    <p class="nav-branding">François Didouche</p>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projets.html" class="nav-link active">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>  
+    </header>
+
+    <main>
+        <div class="projects-container">
+            <h1 class="page-title">Projects</h1>
+            
+            <div class="projects-list"></div>
+        </div>
+    </main>
+
+    <!-- MODALE PROJET -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-subtitle" id="modalSubtitle"></p>
+                    <div class="modal-section">
+                        <h3>Description :</h3>
+                        <p id="modalDescription"></p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Technologies utilisées :</h3>
+                        <p id="modalTechnologies"></p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Objectifs :</h3>
+                        <p id="modalObjectif"></p>
+                    </div>
+                    <div class="modal-links" id="modalLinks">
+                        <!-- Les liens seront ajoutés dynamiquement -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
