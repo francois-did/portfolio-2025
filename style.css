@@ -26,7 +26,7 @@ header {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 810px;
   margin: 12px auto;
   width: 100%;
 }
@@ -273,8 +273,8 @@ header {
 }
 
 .social-icons a:hover {
-  color: #4a5568;
-  border-color: #cbd5e0;
+  color: #5482cc;
+  border-color: #88b1f3;
   transform: translateY(-1px);
 }
 
@@ -353,18 +353,31 @@ header {
 }
 
 .projets-title a {
-  border: 1px solid blue;
-  border-radius: 15px;
-  padding: 12px;
-  color: white;
-  background-color: blue;
-  transition: all 0.3s ease;
+  color: #4299e1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
 }
 
 .projets-title a:hover {
-  background-color: #1e40af;
-  transform: translateY(-2px);
+  color: #216bb1;
+  text-decoration: none
 }
+
+.projets-title a:hover .link-text {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.projets-title a i {
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
 
 .projets {
   display: flex;
@@ -496,7 +509,7 @@ header {
 
 .section-subtitle {
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: 'Arial', sans-serif;
   text-shadow: 1px 1px 0 #facc15;
 }
@@ -651,7 +664,7 @@ header {
 }
 
 .contact-item:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
