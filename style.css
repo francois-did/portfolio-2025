@@ -5,8 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color: #333;
 }
 
@@ -27,29 +26,29 @@ header {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 800px;
   margin: 12px auto;
   width: 100%;
-  padding: 0 20px;
 }
 
 .navbar {
-  min-height: 70px;
+  min-height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 34px;
+  padding: 12px 34px;
   background-color: #f4f6fc;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   border: 1px solid #E5E7EB;
+  font-weight: 600;
 }
 
 .nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 45px;
+  gap: 40px;
 }
 
 .logo {
@@ -66,12 +65,16 @@ header {
 }
 
 .nav-branding {
-  font-size: 1.2em;
-  color: #3B82F6;
+  font-size: 19px;
+  color: #88b1f3;
 }
 
 .nav-item a{
-  color: black;
+  color: rgb(80, 76, 76);
+}
+
+.nav-item a:hover{
+    color: black;
 }
 
 .nav-link {
@@ -80,6 +83,7 @@ header {
   transition: 0.7s ease;
   font-size: 16px;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .nav-link::after {
@@ -88,7 +92,7 @@ header {
   left: 0;
   bottom: -4px;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: black;
   transition: 0.7s ease;
 }
@@ -156,116 +160,135 @@ header {
       ABOUT
 ****************/
 
+/****************
+      ABOUT
+****************/
+
 #dynamic-presentation {
-  font-size: 25px;
-  font-weight: 700;
-  font-family: 'Arial', sans-serif;
-  text-shadow: 1px 1px 0 #facc15;
-  margin-bottom: 19px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+#dynamic-presentation::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #4299e1;
+  border-radius: 2px;
 }
 
 .about {
-  max-width: 900px;
+  max-width: 800px;
   margin: 12px auto;
   width: 100%;
-  padding: 0 20px;
+  padding: 40px 0;
+  margin-bottom: 60px;
 }
 
 .about-text {
-  width: 80%;
+  flex: 1;
 }
 
 .about-title {
-  margin-bottom: 25px;
-  font-size: 25px;
-  font-weight: bold;
-  color: black;
-  text-shadow: 1px 1px 0 #1e3a8a;
+  font-size: 20px;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 20px;
 }
 
 .about-details {
-  margin: 10px 0;
-  width: 80%;
-  color: #374151;
-  font-size: 17px;
+  color: #718096;
+  font-size: 16px;
+  margin-bottom: 14px;
+  line-height: 1.6;
+  max-width: 85%;
 }
 
 .text-container {
   display: flex;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 22px;
 }
 
 .about-photo img {
-  height: 150px;
-  width: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin-top: -40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /**** SOCIAL *******/
 
 .about-info {
   display: flex;
-  gap: 30px;
   align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 110px;
 }
 
 .info-b button {
-  background-color: #1d4ed8;
+  background: #4299e1;
   color: white;
-  padding: 10px 20px;
   border: none;
-  border-radius: 12px;
+  padding: 10px 20px;
+  border-radius: 8px;
   font-weight: 500;
-  font-size: 15px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.3s;
+  transition: background 0.2s;
+  box-shadow: 0 2px 4px rgba(66, 153, 225, 0.2);
 }
 
 .info-b button:hover {
-  background-color: #2563eb; 
+  background: #3182ce;
 }
 
 .social-icons {
   display: flex;
+  gap: 8px;
 }
 
 .social-icons a {
+  width: 36px;
+  height: 36px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: #4b5563; 
-  font-size: 22px;
-  width: 38px;
-  height: 38px;
+  justify-content: center;
   border-radius: 8px;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  color: #718096;
+  transition: all 0.2s;
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .social-icons a:hover {
-  background-color: #f4f6fc;
-  border-radius: 8px;
-  border: 1px solid grey;
+  color: #4a5568;
+  border-color: #cbd5e0;
+  transform: translateY(-1px);
 }
 
 /* RESPONSIVE ABOUT */
 @media (max-width: 768px) {
   .about {
-    padding: 0 15px;
+    padding: 40px 15px;
   }
 
   .text-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 24px;
   }
 
   .about-text {
@@ -274,6 +297,7 @@ header {
 
   .about-details {
     width: 100%;
+    max-width: 100%;
   }
 
   .about-photo {
@@ -283,26 +307,26 @@ header {
 
   .about-photo img {
     margin-top: 0;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
 
   #dynamic-presentation {
-    font-size: 20px;
+    font-size: 28px;
     text-align: center;
   }
 
   .about-title {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .about-details {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .about-info {
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
   }
 }
 
@@ -311,7 +335,7 @@ header {
 *****************/
 
 .projets-container {
-  max-width: 850px;
+  max-width: 800px;
   margin: 0 auto 80px auto;
 }
 
@@ -324,8 +348,7 @@ header {
 
 .projets-title h2 {
   font-size: 25px;
-  font-weight: 700;
-  font-family: 'Arial', sans-serif;
+  font-weight: 600;
   text-shadow: 1px 1px 0 #facc15;
 }
 
@@ -461,9 +484,8 @@ header {
  COMPETENCES 
 ***********/
 .competences-section {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto 80px auto;
-    padding: 60px 20px;
     font-family: Arial, sans-serif;
 }
 
@@ -594,9 +616,8 @@ header {
  CONTACT 
 ***********/
 .contact-section {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 60px 20px;
     font-family: Arial, sans-serif;
 }
 
